@@ -1,5 +1,6 @@
 require_relative 'deputy53/agent'
 require_relative 'deputy53/cli'
+require_relative 'deputy53/exceptions'
 require_relative 'deputy53/contracted_object'
 require_relative 'deputy53/route53'
 require_relative 'deputy53/zone'

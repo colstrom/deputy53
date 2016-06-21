@@ -13,5 +13,10 @@ module Deputy53
       user ||= subdomain.split('.').slice(0..-3).join('.')
       Assigner.new.assign(subdomain, user)
     end
+
+    def policy(subdomain)
+      subdomain = "#{subdomain}." unless subdomain.end_with? '.'
+      Assigner.new.policy(subdomain)
+    end
   end
 end

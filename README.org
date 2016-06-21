@@ -1,0 +1,39 @@
+#+TITLE: Deputy53
+#+LATEX: \pagebreak
+
+* Overview
+
+  ~deputy53~ is a commandline tool to delegate control of a subdomain to another
+  hosted zone, and optionally grant control of that subdomain to an IAM user.
+
+* Rationale
+
+  It is often useful to allow a user or group of users limited access to DNS
+  records. However, Route53 does not support granular access to a partial record
+  set for a zone.
+
+  One solution to this is to create an additional zone, and delegate to that
+  zone for a subset of records (a subdomain, for instance).
+
+  This process is cumbersome, and therefore prone to human error. ~deputy53~
+  simplifies this process.
+
+* Installation
+
+  #+BEGIN_SRC shell
+    gem install deputy53
+  #+END_SRC
+
+* Usage
+
+  #+BEGIN_SRC shell
+    deputy53 delegate <subdomain>
+  #+END_SRC
+
+* License
+
+  ~deputy53~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See ~LICENSE.txt~ for the full text.
+
+* Contributors
+
+  - [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]

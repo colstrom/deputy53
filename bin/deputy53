@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'instacli'
+require_relative '../lib/deputy53/cli'
+
+class CLI < InstaCLI::CLI
+  include InstaCLI::Demuxing
+end
+
+CLI.new(deputy53: Deputy53::CLI.new).execute(*ARGV)

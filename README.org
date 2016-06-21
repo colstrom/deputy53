@@ -26,9 +26,19 @@
 
 * Usage
 
+** Delegate a subdomain to a new hosted zone
+
   #+BEGIN_SRC shell
     deputy53 delegate <subdomain>
   #+END_SRC
+
+** Assign control of a subdomain to an IAM entity
+
+   If =identity= is omitted, it will be inferred from the subdomain.
+
+   #+BEGIN_SRC shell
+     deputy53 assign <subdomain> [identity]
+   #+END_SRC
 
 * License
 

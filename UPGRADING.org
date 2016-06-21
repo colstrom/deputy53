@@ -1,0 +1,6 @@
+#+TITLE: Upgrading Notes
+
+* 0.7 -> 0.8
+
+  - ~Deputy53::Route53#id~ now raises a ~ZoneNotFoundError~ when the requested
+    zone is not found, rather than a ~KeyError~.

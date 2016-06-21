@@ -1,4 +1,5 @@
 require 'aws-sdk'
+require_relative 'exceptions'
 
 module Deputy53
   # A Route53 Client
@@ -35,7 +36,7 @@ module Deputy53
 
     Contract String => String
     def id(name)
-      raise KeyError unless zone? name
+      raise ZoneNotFoundError unless zone? name
       zones(name).first.id
     end
   end
